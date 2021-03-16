@@ -1,14 +1,26 @@
 # MPD BOX on Pimoroni's Phat Beat / pirate radio
-- Use [Python Music Player Daemon](https://www.musicpd.org/) as a service to play both local files and playlists (including radio urls) on the phat beat.
-- Use [beets](http://beets.io/) (optionnaly ?) to organize / import the local music library
-- Use [MPD client lib](https://www.musicpd.org/libs/python-musicpd/) in a python script running as a service. It will act as a MPD client to control the local MPD server service, through the phat beat buttons
-- Others clients should be able to control played music through the local network. (Many android clients are available)
+1. Use [Python Music Player Daemon](https://www.musicpd.org/) as a service to play both local files and playlists (including radio urls) on the phat beat.
 
-## Controls
-Use button holding (next / prev) to cycle through playlists.
+2. Use [beets](http://beets.io/) (optionnaly ?) to organize / import the local music library
 
-## LED
-Replace green only pivumeter by a rainbow one. Integrated within the _client_ service or decoupled ?
+3. Use [MPD client lib](https://www.musicpd.org/libs/python-musicpd/) in a python script running as a service. It will act as a MPD client to control the local MPD server service, through the phat beat buttons.
+
+  Others clients should be able to control played music through the local network. (Many android clients are available). Command-line client [mpc](https://linux.die.net/man/1/mpc) is available.
+
+## Installation
+See [Install](Install.md).
+
+## Roadmap
+client service script still to do. See ideas below.
+
+### Controls
+Use button holding (next / prev) to cycle through available playlists.
+
+### LED
+Visual feedback when using buttons (setting volume / browsing playlist(s)).
+
+Replace Pimoroni's green pivumeter by a _rainbow_ one.
+Integrated within the _client_ service or decoupled ?
 
 Something along this :
 
@@ -40,3 +52,7 @@ def show_volume(self, level, saturation=1.0, value=0.2):
     phatbeat.show()
 
 ```
+
+On the second led bar, show playlist or track progress ?
+
+Maybe representing playlist as a color spectre and adjusting shown part of the spectre to available leds / size of the playlist ?
