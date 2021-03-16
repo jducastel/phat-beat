@@ -10,6 +10,9 @@
 ## Installation
 See [Install](Install.md).
 
+## Troubleshooting
+See [Troubleshooting](Troubleshooting.md).
+
 ## Roadmap
 client service script still to do. See ideas below.
 
